@@ -6,13 +6,13 @@ from rest_framework import status
 from drf_spectacular.utils import extend_schema
 from django.urls import reverse
 
-from devopshobbies.api.pagination import  get_paginated_response, LimitOffsetPagination, get_paginated_response_context
+from devops.api.pagination import  get_paginated_response, LimitOffsetPagination, get_paginated_response_context
 from rest_framework.pagination import PageNumberPagination
 
-from devopshobbies.blog.models import Post 
-from devopshobbies.blog.selectors.posts import post_detail, post_list 
-from devopshobbies.blog.services.post import create_post 
-from devopshobbies.api.mixins import ApiAuthMixin
+from devops.blog.models import Post 
+from devops.blog.selectors.posts import post_detail, post_list 
+from devops.blog.services.post import create_post 
+from devops.api.mixins import ApiAuthMixin
 
 
 class PostApi(ApiAuthMixin, APIView):

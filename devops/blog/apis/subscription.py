@@ -5,12 +5,12 @@ from rest_framework import status
 
 from drf_spectacular.utils import extend_schema
 
-from devopshobbies.api.pagination import get_paginated_response, LimitOffsetPagination
+from devops.api.pagination import get_paginated_response, LimitOffsetPagination
 
-from devopshobbies.blog.models import Subscription
-from devopshobbies.blog.selectors.posts import get_subscribers
-from devopshobbies.blog.services.post import unsubscribe, subscribe
-from devopshobbies.api.mixins import ApiAuthMixin
+from devops.blog.models import Subscription
+from devops.blog.selectors.posts import get_subscribers
+from devops.blog.services.post import unsubscribe, subscribe
+from devops.api.mixins import ApiAuthMixin
 
 
 class SubscribeDetailApi(ApiAuthMixin, APIView):

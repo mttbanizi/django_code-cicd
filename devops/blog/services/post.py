@@ -1,5 +1,5 @@
-from devopshobbies.blog.models import Post, Subscription
-from devopshobbies.users.models import BaseUser, Profile
+from devops.blog.models import Post, Subscription
+from devops.users.models import BaseUser, Profile
 
 from django.db import transaction
 from django.db.models import QuerySet

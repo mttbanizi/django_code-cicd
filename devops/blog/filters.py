@@ -4,7 +4,7 @@ from django_filters import (
 )
 from django.contrib.postgres.search import SearchVector
 from django.utils import timezone
-from devopshobbies.blog.models import Post
+from devops.blog.models import Post
 from rest_framework.exceptions import APIException
 
 

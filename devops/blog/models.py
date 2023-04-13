@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.exceptions import ValidationError
-from devopshobbies.common.models import BaseModel
-from devopshobbies.users.models import BaseUser
+from devops.common.models import BaseModel
+from devops.users.models import BaseUser
 
 
 class Post(BaseModel):
