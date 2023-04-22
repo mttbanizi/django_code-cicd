@@ -3,8 +3,8 @@ from django.db import transaction
 from django.utils.timezone import get_default_timezone_name
 
 from django_celery_beat.models import IntervalSchedule, CrontabSchedule, PeriodicTask
-from devops.users.tasks import profile_count_update as profile_update_task, hello2 as hello2_task
-from devops.tasks.tasks import test1 as test1_task
+# from devops.users.tasks import profile_count_update as profile_update_task, hello1 as hello2_task
+from devops.users.tasks import hello1 as hello1_task, profile_count_updates as profile_update_task
 
 class Command(BaseCommand):
     help = """
@@ -23,38 +23,22 @@ class Command(BaseCommand):
         CrontabSchedule.objects.all().delete()
         PeriodicTask.objects.all().delete()
 
-        """
-        Example:
-        {
-            'task': periodic_task_name,
-            'name': 'Periodic task description',
-            # Everyday at 15:45
-            # https://crontab.guru/#45_15_*_*_*
-            'cron': {
-                'minute': '45',
-                'hour': '15',
-                'day_of_week': '*',
-                'day_of_month': '*',
-                'month_of_year': '*',
-            },
-            'enabled': True
-        },
-        """
+
         periodic_tasks_data = [
-        {
-            'task': test1_task,
-            'name': 'Periodic task description',
-            # EveryMinute to everyday
-            # https://crontab.guru/#45_15_*_*_*
-            'cron': {
-                'minute': '*',
-                'hour': '*',
-                'day_of_week': '*',
-                'day_of_month': '*',
-                'month_of_year': '*',
-            },
-            'enabled': True
-        },
+        # {
+        #     'task': hello1_task,
+        #     'name': 'Periodic task description',
+        #     # EveryMinute to everyday
+        #     # https://crontab.guru/#45_15_*_*_*
+        #     'cron': {
+        #         'minute': '*',
+        #         'hour': '*',
+        #         'day_of_week': '*',
+        #         'day_of_month': '*',
+        #         'month_of_year': '*',
+        #     },
+        #     'enabled': True
+        # },
         {
             'task': profile_update_task,
             'name': 'profile task description',

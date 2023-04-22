@@ -11,10 +11,10 @@ CELERY_TASK_SOFT_TIME_LIMIT = 20  # seconds
 CELERT_TASK_TIME_LIMIT = 30  # seconds
 CELERY_TASK_MAX_RETRIES = 3
 
-CELERY_BEAT_SCHEDULE = {
-    'notify_customers': {
-        'task': 'config.tasks.notify_customers',
-        'schedule': 500,
-        'args': ['Hello World'],
-    }
-}
+# CELERY_BEAT_SCHEDULE = {
+#     'notify_customers': {
+#         'task': 'devops.users.tasks.hello1',
+#         'schedule': 10,
+#         # 'args': ['Hello World'],
+#     }
+# }
