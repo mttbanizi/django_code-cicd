@@ -85,7 +85,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': env.db('DATABASE_URL', default='psql://user:password@127.0.0.1:5432/devops'),
-    'NAME':'devops',
+    'HOST': os.environ.get('DB_HOST') ,
+    'NAME': os.environ.get('DB_NAME') ,
+    'USER': os.environ.get('DB_USER') ,
+    'PASSWORD': os.environ.get('DB_PASS'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
