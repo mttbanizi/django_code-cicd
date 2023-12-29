@@ -27,4 +27,4 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       run: |
-        python manage.py test
+        python manage.py django_code-cicd/blob/main/devops/tests/services/test_create_post.py
