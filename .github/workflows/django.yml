@@ -13,6 +13,10 @@ jobs:
         python-version: [3.9]
 
     steps:
+    - name: Clear Python cache
+      run: |
+        echo "Clearing Python cache..."
+        sudo rm -rf /opt/hostedtoolcache/Python-*
     - name: Checkout repository
       uses: actions/checkout@v2
 
